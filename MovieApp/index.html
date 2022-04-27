@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <title>MovieApp Project</title>
+</head>
+<body>
+  <!-- The title contains the name of the project with a link to the main page, information about the project, clicking on which a modal window (popup) with a description will appear, and a movie search form. -->
+  <header class="header container">
+    <div class="headerContent">
+      <a href="index.html" class="headerLogo">MovieApp</a>
+      <a href="#" class="aboutLink" data-modal-btn="aboutModal">About this project</a>
+      <form>
+        <input type="text" class="headerSearch" placeholder="Search">
+      </form>
+    </div>
+  </header>
+
+
+  <!-- A container for movie posters is created below. It is empty because it will be filled with information from the API using JavaScript -->
+  <div class="container">
+    <div class="posters">
+
+      <!-- The block below was used to manually make the layout and style it and served as a template for JavaScript to generate posters. -->
+      <!-- <div class="poster">
+        <div class="posterCoverInner"">
+          <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,3,128,176_AL_.jpg" alt="The Shawshank Redemption" class="posterCover">
+          <div class="posterCoverDarkened"></div>
+        </div>
+        <div class="posterInfo">
+          <div class="movieTitle">The Shawshank Redemption</div>
+          <div class="movieYear">1994</div>
+          <div class="movieRating ratingColorGreen">9.2</div> 
+        </div>
+      </div> -->
+
+
+    </div>
+  </div>
+
+
+  <!-- The code below creates the content of the modal window. -->
+  <div data-modal-window="aboutModal" class="modal">
+    <div class="modalContent">
+      <div class="modalInner">
+        <div class="modalTitle">About this site</div>
+        <div class="closeModalWindow">&times;</div>
+      </div>
+      <p>The MovieApp project was created by me to practice my front-end skills. <br>This site contains a list of the top 250 films according to the IMDb rating and the movie search system.<br> This site was created using HTML, CSS, JavaScript and the public IMDb API. While working on this site, I tried to comment on my code. <br>I plan to add the missing functionality to this site in the next versions.
+      <span>Best regards, <br> Vadim Sobinin</span> </p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
